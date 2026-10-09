@@ -6,11 +6,11 @@
 /*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 17:15:20 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 20:29:44 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/09 22:14:54 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	rotate(t_list **stack)
 {

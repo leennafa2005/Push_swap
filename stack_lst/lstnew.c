@@ -6,13 +6,13 @@
 /*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 19:47:46 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/08 19:49:31 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/09 22:20:16 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(int content)
 {
 	t_list	*ptr;
 

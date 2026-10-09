@@ -6,11 +6,11 @@
 /*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 19:50:38 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 17:23:48 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/09 22:15:22 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

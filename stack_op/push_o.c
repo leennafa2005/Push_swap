@@ -6,11 +6,11 @@
 /*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 03:55:34 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 20:28:41 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/09 22:15:04 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	pa(t_list **stack_a, t_list **stack_b)
 {

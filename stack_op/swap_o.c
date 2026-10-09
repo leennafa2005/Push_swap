@@ -6,11 +6,11 @@
 /*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 19:37:11 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 20:27:49 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/09 22:14:35 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static void	swapo(t_list **stack)
 {

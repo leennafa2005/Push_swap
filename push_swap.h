@@ -6,12 +6,13 @@
 /*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 21:28:28 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 19:56:08 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/09 22:19:57 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 typedef struct s_list
 {
@@ -24,7 +25,7 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 t_list				*ft_lstlast(t_list *lst);
 unsigned int		ft_lstsize(t_list *lst);
-t_list				*ft_lstnew(void *content);
+t_list				*ft_lstnew(int content);
 t_list				*get_before_last(t_list *lst);
 
 void				sa(t_list **stack);
