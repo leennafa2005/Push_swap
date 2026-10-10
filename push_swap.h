@@ -6,13 +6,13 @@
 /*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 21:28:28 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 22:19:57 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/10 19:17:55 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <unistd.h>
 #include <stdlib.h>
+#include <unistd.h>
 
 typedef struct s_list
 {
@@ -39,3 +39,4 @@ void				rr(t_list **stack_a, t_list **stack_b);
 void				rra(t_list **stack_a);
 void				rrb(t_list **stack_b);
 void				rrr(t_list **stack_a, t_list **stack_b);
+float				disorder(t_list **stack);
