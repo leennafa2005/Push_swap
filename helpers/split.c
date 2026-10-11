@@ -65,7 +65,7 @@ static char	*copy_word(char const *s, char c)
 	return (r);
 }
 
-static void	malloc_free(char **s, size_t j)
+static void	mallocs_free(char **s, size_t j)
 {
 	while (j > 0)
 	{
@@ -93,7 +93,7 @@ char	**ft_split(char const *s, char c)
 		res[j] = copy_word(&s[i], c);
 		if (!res[j])
 		{
-			malloc_free(res, j);
+			mallocs_free(res, j);
 			return (NULL);
 		}
 		i = i + get_len(&s[i], c);

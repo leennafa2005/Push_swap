@@ -6,18 +6,17 @@
 /*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 07:21:52 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/10 07:21:52 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/11 12:16:23 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap2.h"
 
-static int	check_overflow(long result, int sign, char c)
+int	check_overflow(long result, int sign, char c)
 {
 	if (sign == 1 && result > (INT_MAX - (c - '0')) / 10)
 		return (0);
-	if (sign == -1
-		&& result > (-(long)INT_MIN - (c - '0')) / 10)
+	if (sign == -1 && result > (-(long)INT_MIN - (c - '0')) / 10)
 		return (0);
 	return (1);
 }
