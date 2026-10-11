@@ -6,12 +6,19 @@
 /*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:50:14 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/10 09:15:49 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/10 20:16:43 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap2.h"
-// parse the numbers if they are separated by spaces and store them in stack_a
+
+static int	free_split(char **split_numbers)
+{
+	if (split_numbers)
+		malloc_free(split_numbers);
+	return (0);
+}
+
 int	parse_num(char *num, t_list **stack_a)
 {
 	char	**split_numbers;
@@ -19,21 +26,15 @@ int	parse_num(char *num, t_list **stack_a)
 	int		value;
 
 	split_numbers = ft_split(num, ' ');
-	if (!split_numbers)
-		return (0);
+	if (!split_numbers || !split_numbers[0])
+		return (free_split(split_numbers));
 	j = 0;
 	while (split_numbers[j])
 	{
 		if (!ft_atoi(split_numbers[j], &value))
-		{
-			malloc_free(split_numbers);
-			return (0);
-		}
+			return (free_split(split_numbers));
 		if (!store_num(stack_a, value))
-		{
-			malloc_free(split_numbers);
-			return (0);
-		}
+			return (free_split(split_numbers));
 		j++;
 	}
 	malloc_free(split_numbers);

@@ -41,16 +41,23 @@ void	init_flags(t_flag *flag)
 	flag->bench_set = 0;
 }
 
-int	parse_flags(char *av, t_flag *flag)
+int	parse_flags(char *arg, t_flag *flag)
 {
-	if (is_strategy(av) != INVALID && !flag->strategy_set)
+	int	strategy;
+
+	strategy = is_strategy(arg);
+	if (strategy != INVALID)
 	{
-		flag->strategy = is_strategy(av);
+		if (flag->strategy_set)
+			return (0);
+		flag->strategy = strategy;
 		flag->strategy_set = 1;
 		return (1);
 	}
-	else if (is_bench(av) && !flag->bench_set)
+	if (is_bench(arg))
 	{
+		if (flag->bench_set)
+			return (0);
 		flag->bench = 1;
 		flag->bench_set = 1;
 		return (1);
