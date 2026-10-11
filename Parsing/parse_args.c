@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "../push_swap2.h"
-//the main function to parse the arguments and store the numbers in stack_a
+
+// the main function to parse the arguments and store the numbers in stack_a
 int	parse_args(int ac, char **av, t_flag *flag, t_list **stack_a)
 {
 	int	i;
@@ -23,18 +24,12 @@ int	parse_args(int ac, char **av, t_flag *flag, t_list **stack_a)
 		if (ft_strncmp(av[i], "--", 2) == 0)
 		{
 			if (!parse_flags(av[i], flag))
-			{
-				write(2, "Error\n", 6);
-				return (0);
-			}
+				return (write(2, "Error\n", 6), 0);
 		}
 		else
 		{
-			if (!parse_numbers(av[i], stack_a))
-			{
-				write(2, "Error\n", 6);
-				return (0);
-			}
+			if (!parse_num(av[i], stack_a))
+				return (write(2, "Error\n", 6), 0);
 		}
 		i++;
 	}
