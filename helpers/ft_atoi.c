@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 07:21:52 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/11 12:16:23 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/11 18:22:27 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap2.h"
+#include "../push_swap.h"
 
 int	check_overflow(long result, int sign, char c)
 {

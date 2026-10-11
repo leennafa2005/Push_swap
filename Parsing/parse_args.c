@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse_arg.c                                        :+:      :+:    :+:   */
+/*   parse_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 04:18:44 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/10 04:18:44 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/11 18:21:49 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap2.h"
+#include "../push_swap.h"
 
 // the main function to parse the arguments and store the numbers in stack_a
 int	parse_args(int ac, char **av, t_flag *flag, t_list **stack_a)

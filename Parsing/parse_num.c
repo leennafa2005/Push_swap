@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_num.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:50:14 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/10 20:16:43 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/11 18:22:07 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap2.h"
+#include "../push_swap.h"
 
 static int	free_split(char **split_numbers)
 {

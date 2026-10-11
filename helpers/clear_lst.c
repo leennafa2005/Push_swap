@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap2.h"
+#include "../push_swap.h"
 
 void	del_content(int content)
 {

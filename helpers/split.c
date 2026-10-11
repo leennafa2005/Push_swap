@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap2.h"
+#include "../push_swap.h"
 
 static size_t	word_count(char const *s, char c)
 {

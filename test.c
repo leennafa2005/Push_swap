@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   test.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 12:13:04 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/11 12:13:04 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/11 18:21:34 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap2.h"
+#include "push_swap.h"
 
 int	main(int ac, char **av)
 {
@@ -25,8 +25,6 @@ int	main(int ac, char **av)
 	{
 		if (!parse_args(ac, av, &flag, &stack_a))
 			return (ft_lstclear(&stack_a, del_content), 1);
-				/*even if parsing fail as long calling
-																lstclear works the program consider its a valid execution*/
 		if (flag.bench_set)
 			ft_printf(1, "%s", "call bench\n");
 		if (!is_sorted(stack_a))

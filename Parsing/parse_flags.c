@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_flags.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:36:39 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/08 14:36:39 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/11 18:21:59 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap2.h"
+#include "../push_swap.h"
 
 int	is_strategy(char *arg)
 {
@@ -63,4 +63,4 @@ int	parse_flags(char *arg, t_flag *flag)
 		return (1);
 	}
 	return (0);
-}
+} 

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   lst_add_back.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 07:00:29 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/10 08:52:13 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/11 18:22:47 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap2.h"
+#include "../push_swap.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new) /*add at the end of the list
 												cause we are storing the numbers in the order they are given
