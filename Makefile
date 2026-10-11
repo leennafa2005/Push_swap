@@ -5,7 +5,8 @@ CFLAGS = -Wall -Wextra -Werror
 SRCS = $(wildcard *.c) \
        $(wildcard Parsing/*.c) \
        $(wildcard helpers/*.c) \
-       $(wildcard Printf/*.c)
+       $(wildcard Printf/*.c) \
+	   $(wildcard stack_op/*.c)
 
 OBJS = $(SRCS:.c=.o)
 
