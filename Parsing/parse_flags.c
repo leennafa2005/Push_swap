@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 14:36:39 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/11 18:21:59 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/11 19:54:33 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	is_bench(char *arg)
 		return (1);
 	return (0);
 }
-// initialize the flags structure with default values
 
 void	init_flags(t_flag *flag)
 {
@@ -63,4 +62,4 @@ int	parse_flags(char *arg, t_flag *flag)
 		return (1);
 	}
 	return (0);
-} 
+}
