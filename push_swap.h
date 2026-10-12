@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:51:32 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/11 19:50:38 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/12 18:11:20 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void				del_content(int content);
 int					is_sorted(t_list *stack_a);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 t_list				*ft_lstlast(t_list *lst);
-unsigned int		ft_lstsize(t_list *lst);
+int					ft_lstsize(t_list *lst);
 t_list				*ft_lstnew(int content);
 t_list				*get_before_last(t_list *lst);
 
@@ -80,5 +80,6 @@ void				rra(t_list **stack_a);
 void				rrb(t_list **stack_b);
 void				rrr(t_list **stack_a, t_list **stack_b);
 float				disorder(t_list **stack);
+void				simple(t_list **stack_a, t_list **stack_b);
 
 #endif

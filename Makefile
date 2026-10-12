@@ -6,7 +6,8 @@ SRCS = $(wildcard *.c) \
        $(wildcard Parsing/*.c) \
        $(wildcard helpers/*.c) \
        $(wildcard Printf/*.c) \
-	   $(wildcard stack_op/*.c)
+	   $(wildcard stack_op/*.c) \
+	   $(wildcard s/*.c)
 
 OBJS = $(SRCS:.c=.o)
 
