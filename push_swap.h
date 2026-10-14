@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:51:32 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/12 18:11:20 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/14 20:43:33 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <limits.h>
 # include <stddef.h>
 # include <stdlib.h>
+#include <math.h>
 // a values to represent the different strategies for sorting
 typedef enum e_strategy
 {
@@ -24,7 +25,7 @@ typedef enum e_strategy
 	ADAPTIVE,
 	SIMPLE,
 	MEDIUM,
-	COMPLEX
+	COMPLEX<math.h>
 }					t_strategy;
 
 typedef struct s_flag
@@ -38,6 +39,8 @@ typedef struct s_flag
 typedef struct s_list
 {
 	int				content;
+	int				index;
+	int				chunk;
 	struct s_list	*next;
 }					t_list;
 

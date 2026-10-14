@@ -3,56 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   simple.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:20:05 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/12 22:28:42 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/14 18:24:01 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 void	print_stack(t_list *stack, char *name);
-int maxv(t_list **stack)
+int minv(t_list **stack)
 {
     t_list *temp;
-    int max;
+    int min;
     
     temp = *stack;
-    max = temp -> content;
+    min = temp -> content;
     while (temp)
     {
-        if (max < temp-> content)
-                max = temp -> content;
+        if (min > temp-> content)
+                min = temp -> content;
         temp = temp-> next;
     }
-    return (max);
+    return (min);
     
-}
-void	simplen(t_list **stack_a, t_list **stack_b)
-{
-	int	count;
-
-	pb(stack_a, stack_b);
-	pb(stack_a, stack_b);
-	if ((*stack_b)->content < (*stack_b)->next->content)
-		sb(stack_b);
-	while (*stack_a)
-	{
-		count = 0;
-		while ((*stack_a)->content < (*stack_b)->content
-			&& (count < ft_lstsize(*stack_b) - 1))
-		{
-			rb(stack_b);
-			count++;
-		}
-		pb(stack_a, stack_b);
-		if ((*stack_b)->content < (*stack_b)->next->content)
-			sb(stack_b);
-        while (count --)
-         rrb(stack_b);
-	}
-	while (*stack_b)
-		pa(stack_a, stack_b);
 }
 
 /* دالة صغيرة بس بتجيب كم خطوة لازم نمشي لنلاقي مكان الرقم */
@@ -72,36 +46,26 @@ static int	get_steps(t_list *b, int val)
 void	simple(t_list **stack_a, t_list **stack_b)
 {
 	int	steps;
-	int	size_b;
+	int	size_a;
 
-	pb(stack_a, stack_b);
-	pb(stack_a, stack_b);
-	if ((*stack_b)->content < (*stack_b)->next->content)
-		sb(stack_b);
 	while (*stack_a)
 	{
-		size_b = ft_lstsize(*stack_b);
-		steps = get_steps(*stack_b, (*stack_a)->content);
-		if (steps <= size_b / 2)
+		size_a = ft_lstsize(*stack_a);
+		steps = get_steps(*stack_a, minv(stack_a));
+		if (steps != 0 && steps <= size_a / 2)
 		{
 			while (steps--)
-				rb(stack_b);
+				ra(stack_a);
 		}
 		else
 		{
-			while (steps++ < size_b)
-				rrb(stack_b);
+			while (steps != 0 && steps++ < size_a)
+				rra(stack_a);
 		}
-		pb(stack_a, stack_b);
-		if ((*stack_b)->content < (*stack_b)->next->content)
-			sb(stack_b);	
+		pb(stack_a,stack_b);
 	}
-	while ((*stack_b)->content < (*stack_b)->next->content)
-		rb(stack_b); 
 	while (*stack_b)
 		pa(stack_a, stack_b);
-    print_stack(*stack_a, "A (Sorted Output)");
-	print_stack(*stack_b, "B (Should be empty)");
 }
 
 #include <stdio.h>
