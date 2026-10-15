@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   medium.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 17:47:37 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/14 20:36:59 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/15 18:29:56 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,6 @@ void    give_index(t_list **stack_a)
         temp -> index = i;
         temp = temp -> next;
     }
-    /*
-    while (*stack_a)
-    {
-        //i = get_index(&temp, temp->content);
-       printf("%d\n",  (*stack_a) -> index);
-        (*stack_a) = (*stack_a) -> next;
-    }
-    */
 }
 void    give_chunk(t_list **stack_a)
 {
@@ -57,14 +49,39 @@ void    give_chunk(t_list **stack_a)
     t_list *temp;
     
     temp = *stack_a;
-    sizec = sqrt(ft_lstsize(*stack_a));
+    sizec = ft_sqrt(ft_lstsize(*stack_a));
     while (temp)
     {
         temp->chunk = (temp->index)/sizec;
         temp = temp->next;
     }
 }
-/*void    medium(t_list  **stack_a, t_list **stack_b)
+void    medium(t_list  **stack_a, t_list **stack_b)
 {
-    int 
-}*/
+    int j;
+    int chunk_num;
+    int chunk_size;
+    int js;
+    
+    give_index(stack_a);
+    give_chunk(stack_a);
+    chunk_size = ft_sqrt(ft_lstsize(*stack_a));
+    chunk_num = (ft_lstsize(*stack_a) / chunk_size) + 1;
+    j = 0;
+    while (*stack_a && j < chunk_num)
+    {
+        js = 0;
+        while (*stack_a && js < chunk_size)
+        {
+            if ((*stack_a)->chunk == j)
+            {
+                pb(stack_a,stack_b);
+                js ++;
+            }
+            else
+                ra(stack_a); //jgrajkhgj
+        }
+        j ++;
+    }
+    print_stack(*stack_b, "b");
+}

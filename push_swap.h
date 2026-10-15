@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:51:32 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/14 20:43:33 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/15 11:15:42 by mohal-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <limits.h>
 # include <stddef.h>
 # include <stdlib.h>
-#include <math.h>
 // a values to represent the different strategies for sorting
 typedef enum e_strategy
 {
@@ -25,7 +24,7 @@ typedef enum e_strategy
 	ADAPTIVE,
 	SIMPLE,
 	MEDIUM,
-	COMPLEX<math.h>
+	COMPLEX,
 }					t_strategy;
 
 typedef struct s_flag
@@ -84,5 +83,9 @@ void				rrb(t_list **stack_b);
 void				rrr(t_list **stack_a, t_list **stack_b);
 float				disorder(t_list **stack);
 void				simple(t_list **stack_a, t_list **stack_b);
+
+void	print_stack(t_list *stack, char *name);
+int	ft_sqrt(int nb);
+void    medium(t_list  **stack_a, t_list **stack_b);
 
 #endif
