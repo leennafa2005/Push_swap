@@ -3,33 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   simple.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:20:05 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/15 18:04:53 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/16 19:50:02 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-void	print_stack(t_list *stack, char *name);
-int minv(t_list **stack)
+
+void		print_stack(t_list *stack, char *name);
+
+int	minv(t_list **stack)
 {
-    t_list *temp;
-    int min;
-    
-    temp = *stack;
-    min = temp -> content;
-    while (temp)
-    {
-        if (min > temp-> content)
-                min = temp -> content;
-        temp = temp-> next;
-    }
-    return (min);
-    
+	t_list	*temp;
+	int		min;
+
+	temp = *stack;
+	min = temp->content;
+	while (temp)
+	{
+		if (min > temp->content)
+			min = temp->content;
+		temp = temp->next;
+	}
+	return (min);
 }
 
-/* دالة صغيرة بس بتجيب كم خطوة لازم نمشي لنلاقي مكان الرقم */
 static int	get_steps(t_list *b, int val)
 {
 	int	steps;
@@ -62,15 +62,14 @@ void	simple(t_list **stack_a, t_list **stack_b)
 			while (steps != 0 && steps++ < size_a)
 				rra(stack_a);
 		}
-		pb(stack_a,stack_b);
+		pb(stack_a, stack_b);
 	}
 	while (*stack_b)
 		pa(stack_a, stack_b);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
-/* دالة مساعدة بتلف على الستاك وبتطبع كل رقم بسطر مع سهم لطيف */
 void	print_stack(t_list *stack, char *name)
 {
 	printf("\n--- Stack %s ---\n", name);
@@ -85,6 +84,4 @@ void	print_stack(t_list *stack, char *name)
 		stack = stack->next;
 	}
 	printf("----------------\n");
-}
-
-
+}*/

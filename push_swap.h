@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:51:32 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/15 11:15:42 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/16 19:33:35 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,14 @@ void				rrr(t_list **stack_a, t_list **stack_b);
 float				disorder(t_list **stack);
 void				simple(t_list **stack_a, t_list **stack_b);
 
-void	print_stack(t_list *stack, char *name);
-int	ft_sqrt(int nb);
-void    medium(t_list  **stack_a, t_list **stack_b);
+void				print_stack(t_list *stack, char *name);
+int					ft_sqrt(int nb);
+void				medium(t_list **stack_a, t_list **stack_b);
+
+int					get_index(t_list **stack_a, int value);
+void				give_index(t_list **stack_a);
+int					get_max(t_list **stack_b);
+void				complex(t_list **stack_a, t_list **stack_b);
+void				adaptive(t_list **stack_a, t_list **stack_b);
 
 #endif
