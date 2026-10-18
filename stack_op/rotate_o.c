@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate_o.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 17:15:20 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 22:14:54 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/18 17:29:22 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,27 @@ static void	rotate(t_list **stack)
 	last->next = temp;
 }
 
-void	ra(t_list **stack_a)
+void	ra(t_list **stack_a, t_bench *bench)
 {
 	rotate(stack_a);
 	write(1, "ra\n", 3);
+	bench->ra ++;
+	bench-> total ++;
 }
 
-void	rb(t_list **stack_b)
+void	rb(t_list **stack_b, t_bench *bench)
 {
 	rotate(stack_b);
 	write(1, "rb\n", 3);
+	bench->rb ++;
+	bench-> total ++;
 }
 
-void	rr(t_list **stack_a, t_list **stack_b)
+void	rr(t_list **stack_a, t_list **stack_b, t_bench *bench)
 {
 	rotate(stack_a);
 	rotate(stack_b);
 	write(1, "rr\n", 3);
+	bench->rr ++;
+	bench-> total ++;
 }

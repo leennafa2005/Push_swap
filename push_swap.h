@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:51:32 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/16 19:33:35 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/18 19:44:22 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,22 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct s_bench
+{
+	int				pa;
+	int				pb;
+	int				sa;
+	int				sb;
+	int				ss;
+	int				ra;
+	int				rb;
+	int				rr;
+	int				rra;
+	int				rrb;
+	int				rrr;
+	int				total;
+}					t_bench;
+
 int					ft_atoi(const char *num, int *value);
 int					is_digit(const char *s);
 int					ft_strcmp(const char *s1, const char *s2);
@@ -60,7 +76,7 @@ int					parse_args(int ac, char **av, t_flag *flag,
 						t_list **stack_a);
 int					is_there_duplicate(t_list *lst, int num);
 void				call_strategy(t_strategy strategy, t_list **stack_a,
-						t_list **stack_b);
+						t_list **stack_b, t_bench *bench);
 void				ft_lstclear(t_list **lst, void (*del)(int));
 void				del_content(int content);
 int					is_sorted(t_list *stack_a);
@@ -70,28 +86,29 @@ int					ft_lstsize(t_list *lst);
 t_list				*ft_lstnew(int content);
 t_list				*get_before_last(t_list *lst);
 
-void				sa(t_list **stack);
-void				sb(t_list **stack);
-void				ss(t_list **stack1, t_list **stack2);
-void				pa(t_list **stack_a, t_list **stack_b);
-void				pb(t_list **stack_a, t_list **stack_b);
-void				ra(t_list **stack_a);
-void				rb(t_list **stack_b);
-void				rr(t_list **stack_a, t_list **stack_b);
-void				rra(t_list **stack_a);
-void				rrb(t_list **stack_b);
-void				rrr(t_list **stack_a, t_list **stack_b);
+void				sa(t_list **stack, t_bench *bench);
+void				sb(t_list **stack, t_bench *bench);
+void				ss(t_list **stack1, t_list **stack2, t_bench *bench);
+void				pa(t_list **stack_a, t_list **stack_b, t_bench *bench);
+void				pb(t_list **stack_a, t_list **stack_b, t_bench *bench);
+void				ra(t_list **stack_a, t_bench *bench);
+void				rb(t_list **stack_b, t_bench *bench);
+void				rr(t_list **stack_a, t_list **stack_b, t_bench *bench);
+void				rra(t_list **stack_a, t_bench *bench);
+void				rrb(t_list **stack_b, t_bench *bench);
+void				rrr(t_list **stack_a, t_list **stack_b, t_bench *bench);
 float				disorder(t_list **stack);
-void				simple(t_list **stack_a, t_list **stack_b);
-
+void				simple(t_list **stack_a, t_list **stack_b, t_bench *bench);
 void				print_stack(t_list *stack, char *name);
 int					ft_sqrt(int nb);
-void				medium(t_list **stack_a, t_list **stack_b);
+void				medium(t_list **stack_a, t_list **stack_b, t_bench *bench);
 
 int					get_index(t_list **stack_a, int value);
 void				give_index(t_list **stack_a);
 int					get_max(t_list **stack_b);
-void				complex(t_list **stack_a, t_list **stack_b);
-void				adaptive(t_list **stack_a, t_list **stack_b);
+void				complex(t_list **stack_a, t_list **stack_b, t_bench *bench);
+void				adaptive(t_list **stack_a, t_list **stack_b, t_bench *bench);
+void    bench(t_bench *bench_data, t_list **stack_a , t_list **stack_b, int strategy);
+
 
 #endif

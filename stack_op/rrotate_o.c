@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrotate_o.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 18:19:08 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 22:14:46 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/18 17:30:33 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,21 +39,27 @@ static void	rrottait(t_list **stack)
 	before_last->next = NULL;
 }
 
-void	rra(t_list **stack_a)
+void	rra(t_list **stack_a, t_bench *bench)
 {
 	rrottait(stack_a);
 	write(1, "rra\n", 4);
+	bench->rra ++;
+	bench ->total ++;
 }
 
-void	rrb(t_list **stack_b)
+void	rrb(t_list **stack_b, t_bench *bench)
 {
 	rrottait(stack_b);
 	write(1, "rrb\n", 4);
+	bench->rrb ++;
+	bench ->total ++;
 }
 
-void	rrr(t_list **stack_a, t_list **stack_b)
+void	rrr(t_list **stack_a, t_list **stack_b, t_bench *bench)
 {
 	rrottait(stack_a);
 	rrottait(stack_b);
 	write(1, "rrr\n", 4);
+	bench->rrr ++;
+	bench ->total ++;
 }

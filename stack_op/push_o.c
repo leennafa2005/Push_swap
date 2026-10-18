@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   push_o.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 03:55:34 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/09 22:15:04 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/18 18:13:37 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	pa(t_list **stack_a, t_list **stack_b)
+void	pa(t_list **stack_a, t_list **stack_b, t_bench *bench)
 {
 	t_list	*temp;
 
@@ -23,9 +23,12 @@ void	pa(t_list **stack_a, t_list **stack_b)
 	*stack_b = (*stack_b)->next;
 	(*stack_a)->next = temp;
 	write(1, "pa\n", 3);
+	bench->pa ++;
+	bench->total ++;
+
 }
 
-void	pb(t_list **stack_a, t_list **stack_b)
+void	pb(t_list **stack_a, t_list **stack_b, t_bench *bench)
 {
 	t_list	*temp;
 
@@ -36,4 +39,6 @@ void	pb(t_list **stack_a, t_list **stack_b)
 	*stack_a = (*stack_a)->next;
 	(*stack_b)->next = temp;
 	write(1, "pb\n", 3);
+	bench->pb ++;
+	bench->total ++;
 }

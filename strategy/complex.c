@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 17:55:23 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/16 19:42:34 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/18 19:19:37 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ int	get_bits(int index)
 	return (bit);
 }
 
-void	complex(t_list **stack_a, t_list **stack_b)
+void	complex(t_list **stack_a, t_list **stack_b, t_bench *bench)
 {
 	int	bits;
 	int	b;
 	int	s;
-
+	
 	give_index(stack_a);
 	bits = get_bits(get_max(stack_a));
 	b = 0;
@@ -39,14 +39,14 @@ void	complex(t_list **stack_a, t_list **stack_b)
 		s = ft_lstsize(*stack_a);
 		while (s)
 		{
-			if (((*stack_a)->index >> b & 2) == 0)
-				pb(stack_a, stack_b);
+			if (((*stack_a)->index >> b & 1) == 0)
+				pb(stack_a, stack_b,bench);
 			else
-				ra(stack_a);
+				ra(stack_a, bench);
 			s--;
 		}
 		while (*stack_b)
-			pa(stack_a, stack_b);
+			pa(stack_a, stack_b, bench);
 		b++;
 	}
 }
