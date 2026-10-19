@@ -33,7 +33,7 @@ int	main(int ac, char **av)
 		if (!is_sorted(stack_a))
 			call_strategy(flag.strategy, &stack_a, &stack_b, &bench_data);
 		if (flag.bench_set)
-			bench(&bench_data, flag.strategy,dis);
+			bench(&bench_data, flag.strategy, dis);
 		ft_lstclear(&stack_a, del_content);
 		ft_lstclear(&stack_b, del_content);
 		return (0);

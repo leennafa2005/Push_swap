@@ -30,16 +30,16 @@ void	sa(t_list **stack_a, t_bench *bench)
 {
 	swapo(stack_a);
 	write(1, "sa\n", 3);
-	bench->sa ++;
-	bench ->total ++;
+	bench->sa++;
+	bench->total++;
 }
 
 void	sb(t_list **stack_b, t_bench *bench)
 {
 	swapo(stack_b);
 	write(1, "sb\n", 3);
-	bench->sb ++;
-	bench ->total ++;
+	bench->sb++;
+	bench->total++;
 }
 
 void	ss(t_list **stack_a, t_list **stack_b, t_bench *bench)
@@ -47,6 +47,6 @@ void	ss(t_list **stack_a, t_list **stack_b, t_bench *bench)
 	swapo(stack_a);
 	swapo(stack_b);
 	write(1, "ss\n", 3);
-	bench->ss ++;
-	bench ->total ++;
+	bench->ss++;
+	bench->total++;
 }

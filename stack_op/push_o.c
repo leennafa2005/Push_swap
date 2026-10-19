@@ -23,9 +23,8 @@ void	pa(t_list **stack_a, t_list **stack_b, t_bench *bench)
 	*stack_b = (*stack_b)->next;
 	(*stack_a)->next = temp;
 	write(1, "pa\n", 3);
-	bench->pa ++;
-	bench->total ++;
-
+	bench->pa++;
+	bench->total++;
 }
 
 void	pb(t_list **stack_a, t_list **stack_b, t_bench *bench)
@@ -39,6 +38,6 @@ void	pb(t_list **stack_a, t_list **stack_b, t_bench *bench)
 	*stack_a = (*stack_a)->next;
 	(*stack_b)->next = temp;
 	write(1, "pb\n", 3);
-	bench->pb ++;
-	bench->total ++;
+	bench->pb++;
+	bench->total++;
 }

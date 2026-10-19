@@ -30,16 +30,16 @@ void	ra(t_list **stack_a, t_bench *bench)
 {
 	rotate(stack_a);
 	write(1, "ra\n", 3);
-	bench->ra ++;
-	bench-> total ++;
+	bench->ra++;
+	bench->total++;
 }
 
 void	rb(t_list **stack_b, t_bench *bench)
 {
 	rotate(stack_b);
 	write(1, "rb\n", 3);
-	bench->rb ++;
-	bench-> total ++;
+	bench->rb++;
+	bench->total++;
 }
 
 void	rr(t_list **stack_a, t_list **stack_b, t_bench *bench)
@@ -47,6 +47,6 @@ void	rr(t_list **stack_a, t_list **stack_b, t_bench *bench)
 	rotate(stack_a);
 	rotate(stack_b);
 	write(1, "rr\n", 3);
-	bench->rr ++;
-	bench-> total ++;
+	bench->rr++;
+	bench->total++;
 }

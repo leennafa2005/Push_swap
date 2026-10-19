@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 17:47:37 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/18 19:20:47 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/19 16:37:53 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,12 +40,14 @@ static int	get_steps_chunk(t_list *b, int val)
 }
 
 void	medium2(t_list **stack_a, t_list **stack_b, int chunk_size,
-		int chunk_num, t_bench *bench)
+		t_bench *bench)
 {
 	int	j;
 	int	js;
+	int	chunk_num;
 
 	j = 0;
+	chunk_num = (ft_lstsize(*stack_a) / chunk_size) + 1;
 	while (*stack_a && j < chunk_num)
 	{
 		js = 0;
@@ -80,16 +82,14 @@ static int	get_steps_index(t_list *b, int val)
 
 void	medium(t_list **stack_a, t_list **stack_b, t_bench *bench)
 {
-	int	chunk_num;
 	int	chunk_size;
 	int	size_b;
 	int	steps;
-	
+
 	give_index(stack_a);
 	give_chunk(stack_a);
 	chunk_size = ft_sqrt(ft_lstsize(*stack_a));
-	chunk_num = (ft_lstsize(*stack_a) / chunk_size) + 1;
-	medium2(stack_a, stack_b, chunk_size, chunk_num, bench);
+	medium2(stack_a, stack_b, chunk_size, bench);
 	while (*stack_b)
 	{
 		size_b = ft_lstsize(*stack_b);

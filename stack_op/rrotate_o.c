@@ -43,16 +43,16 @@ void	rra(t_list **stack_a, t_bench *bench)
 {
 	rrottait(stack_a);
 	write(1, "rra\n", 4);
-	bench->rra ++;
-	bench ->total ++;
+	bench->rra++;
+	bench->total++;
 }
 
 void	rrb(t_list **stack_b, t_bench *bench)
 {
 	rrottait(stack_b);
 	write(1, "rrb\n", 4);
-	bench->rrb ++;
-	bench ->total ++;
+	bench->rrb++;
+	bench->total++;
 }
 
 void	rrr(t_list **stack_a, t_list **stack_b, t_bench *bench)
@@ -60,6 +60,6 @@ void	rrr(t_list **stack_a, t_list **stack_b, t_bench *bench)
 	rrottait(stack_a);
 	rrottait(stack_b);
 	write(1, "rrr\n", 4);
-	bench->rrr ++;
-	bench ->total ++;
+	bench->rrr++;
+	bench->total++;
 }

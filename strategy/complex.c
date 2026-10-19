@@ -30,7 +30,7 @@ void	complex(t_list **stack_a, t_list **stack_b, t_bench *bench)
 	int	bits;
 	int	b;
 	int	s;
-	
+
 	give_index(stack_a);
 	bits = get_bits(get_max(stack_a));
 	b = 0;
@@ -40,7 +40,7 @@ void	complex(t_list **stack_a, t_list **stack_b, t_bench *bench)
 		while (s)
 		{
 			if (((*stack_a)->index >> b & 1) == 0)
-				pb(stack_a, stack_b,bench);
+				pb(stack_a, stack_b, bench);
 			else
 				ra(stack_a, bench);
 			s--;

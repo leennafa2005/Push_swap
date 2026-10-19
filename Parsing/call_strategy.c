@@ -12,7 +12,8 @@
 
 #include "../push_swap.h"
 
-void	call_strategy(t_strategy strategy, t_list **stack_a, t_list **stack_b, t_bench *bench)
+void	call_strategy(t_strategy strategy, t_list **stack_a, t_list **stack_b,
+		t_bench *bench)
 {
 	if (strategy == ADAPTIVE)
 		adaptive(stack_a, stack_b, bench);
