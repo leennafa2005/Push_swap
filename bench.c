@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 18:44:33 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/19 14:06:06 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/19 14:13:04 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char *get_strategy(int s)
 {
-    if(s == 1)
+    if(s == ADAPTIVE)
         return("Adaptive /  OOOOOOOOOOOOOO");
-    else if (s == 2)
+    else if (s == SIMPLE)
         return("Simple / O(n^2)");
-    else if (s ==3)
+    else if (s == MEDIUM)
         return("Medium / O(n√n)");
-    else if (s == 4)
+    else if (s == COMPLEX)
         return("Complex / O(nlogn)");
     else
         return ("not a strategy");
