@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:51:32 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/19 16:52:52 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/19 17:53:23 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <limits.h>
 # include <stddef.h>
 # include <stdlib.h>
-// a values to represent the different strategies for sorting
+
 typedef enum e_strategy
 {
 	INVALID,
