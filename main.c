@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 12:13:04 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/19 17:56:56 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/19 19:22:20 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int	main(int ac, char **av)
 			bench(&bench_data, flag.strategy, dis);
 		ft_lstclear(&stack_a, del_content);
 		ft_lstclear(&stack_b, del_content);
-		return (0);
 	}
 	return (0);
 }
