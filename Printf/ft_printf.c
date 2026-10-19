@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 17:20:15 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/18 19:49:44 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/19 01:01:56 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	check_format(int fd, va_list arg, char c)
 		n = ft_putuhex(fd, va_arg(arg, unsigned int));
 	else if (c == 'p')
 		n = ft_putptr(fd, (unsigned long)va_arg(arg, void *));
-	else if (c == 'c')
+	else if (c == 'f')
 		n = ft_put_float(fd, va_arg(arg, double));
 	else if (c == '%')
 		return (ft_putchar(fd, '%'));

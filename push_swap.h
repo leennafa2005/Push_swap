@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:51:32 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/18 19:44:22 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/19 14:01:53 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void				give_index(t_list **stack_a);
 int					get_max(t_list **stack_b);
 void				complex(t_list **stack_a, t_list **stack_b, t_bench *bench);
 void				adaptive(t_list **stack_a, t_list **stack_b, t_bench *bench);
-void    bench(t_bench *bench_data, t_list **stack_a , t_list **stack_b, int strategy);
+void				bench(t_bench *bench_data, int strategy, float disoreder);
 
 
 #endif
