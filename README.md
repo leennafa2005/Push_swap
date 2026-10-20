@@ -110,8 +110,6 @@ The project is expected to compile using `cc` with the required warning flags:
 -Wall -Wextra -Werror
 ```
 
-If the project uses Libft, the Makefile should compile the library before linking the final executable.
-
 ## Usage
 
 General syntax:
