@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 18:44:33 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/19 16:49:21 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/20 19:54:00 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 char	*get_strategy(int s, float d)
 {

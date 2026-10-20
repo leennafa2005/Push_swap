@@ -7,7 +7,7 @@ SRCS = $(wildcard *.c) \
        $(wildcard helpers/*.c) \
        $(wildcard Printf/*.c) \
 	   $(wildcard stack_op/*.c) \
-	   $(wildcard strategy/*.c)
+	   $(wildcard strategies/*.c)
 
 OBJS = $(SRCS:.c=.o)
 

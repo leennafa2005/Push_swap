@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   disorder.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohal-al <mohal-al@learner.42.tech>        +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 17:32:05 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/10 18:34:00 by mohal-al         ###   ########.fr       */
+/*   Updated: 2026/10/20 19:54:06 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 float	disorder(t_list **stack)
 {
