@@ -84,7 +84,7 @@ The adaptive strategy uses the following thresholds:
 
 These thresholds allow the program to choose a strategy according to how ordered the input already is. The disorder must be measured before any stack operations are performed. The implementation should also handle inputs with fewer than two values without dividing by zero.
 
-## Compilation and Installation
+## Instructions
 
 Compile the project from the root of the repository using the Makefile:
 
