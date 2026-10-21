@@ -44,7 +44,7 @@ The program includes four strategy modes: simple, medium, complex, and adaptive.
 
 **Target complexity: O(n²)**
 
-The simple strategy repeatedly identifies the biggest remaining value and moves it into its correct position using stack operations.
+The simple strategy repeatedly identifies the smallest remaining value and moves it into its correct position using stack operations.
 
 Selection sort is straightforward and provides a useful baseline. However, the number of operations can grow quadratically as the input becomes larger, making it more suitable for small inputs or inputs with low disorder.
 
