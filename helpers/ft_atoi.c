@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 07:21:52 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/11 18:22:27 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/21 20:03:33 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	check_overflow(long result, int sign, char c)
 {
-	if (sign == 1 && result > (INT_MAX - (c - '0')) / 10)
+	if (sign == 1 && result > (2147483647 - (c - '0')) / 10)
 		return (0);
-	if (sign == -1 && result > (-(long)INT_MIN - (c - '0')) / 10)
+	if (sign == -1 && result > (-(long)-2147483648 - (c - '0')) / 10)
 		return (0);
 	return (1);
 }

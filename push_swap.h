@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:51:32 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/21 17:44:03 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/21 20:04:13 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define PUSH_SWAP_H
 
 # include "Printf/ft_printf.h"
-# include <limits.h>
-# include <stddef.h>
 # include <stdlib.h>
 
 typedef enum e_strategy
@@ -110,5 +108,6 @@ void				complex(t_list **stack_a, t_list **stack_b, t_bench *bench);
 void				adaptive(t_list **stack_a, t_list **stack_b, t_bench *b);
 void				bench(t_bench *bench_data, int strategy, float disoreder,
 						t_list **stack_a);
+void				print_stack(t_list *stack, char *name);
 
 #endif

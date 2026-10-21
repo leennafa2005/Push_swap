@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:20:05 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/19 16:52:11 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/21 20:29:35 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	simple(t_list **stack_a, t_list **stack_b, t_bench *bench)
 	int	steps;
 	int	size_a;
 
-	while (*stack_a)
+	while ((*stack_a)->next->next)
 	{
 		size_a = ft_lstsize(*stack_a);
 		steps = get_steps(*stack_a, minv(stack_a));
@@ -63,6 +63,9 @@ void	simple(t_list **stack_a, t_list **stack_b, t_bench *bench)
 				rra(stack_a, bench);
 		}
 		pb(stack_a, stack_b, bench);
+		if ((!(*stack_a)->next->next)
+			&& (*stack_a)->content > (*stack_a)->next->content)
+			sa(stack_a, bench);
 	}
 	while (*stack_b)
 		pa(stack_a, stack_b, bench);

@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 01:50:14 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/11 18:22:07 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/21 19:54:51 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	parse_num(char *num, t_list **stack_a)
 
 	split_numbers = ft_split(num, ' ');
 	if (!split_numbers || !split_numbers[0])
-		return (free_split(split_numbers));
+		return (free_split(split_numbers), 1);
 	j = 0;
 	while (split_numbers[j])
 	{
