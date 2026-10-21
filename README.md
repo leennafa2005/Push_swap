@@ -94,7 +94,7 @@ make
 
 This should compile the project and create the `push_swap` executable.
 
-The Makefile must provide the following targets:
+The Makefile must provide the following targets: (*stack_a)
 
 ```sh
 make        # Compile the program
@@ -104,7 +104,7 @@ make fclean # Remove object files and the executable
 make re     # Clean and rebuild
 ```
 
-The project is expected to compile using `cc` with the required warning flags:
+The project is expected to compile using `cc` with the req (*stack_a)uired warning flags:
 
 ```sh
 -Wall -Wextra -Werror
@@ -112,7 +112,7 @@ The project is expected to compile using `cc` with the required warning flags:
 
 ## Usage
 
-General syntax:
+General syntax: (*stack_a)
 
 ```sh
 ./push_swap [strategy flag] [--bench] integer [integer ...]
@@ -123,7 +123,7 @@ You can provide integers separately:
 ```sh
 ./push_swap 4 67 3 87 23
 ```
-
+ (*stack_a)
 Or provide several integers in one quoted argument:
 
 ```sh
@@ -133,7 +133,7 @@ Or provide several integers in one quoted argument:
 The first integer supplied becomes the top of stack `a`.
 
 ### Strategy Flags
-
+ (*stack_a)
 | Flag         | Behavior                                                                                                    |
 | ------------ | ----------------------------------------------------------------------------------------------------------- |
 | `--simple`   | Force the simple selection-sort adaptation.                                                                 |
@@ -164,7 +164,7 @@ Use the default adaptive strategy:
 
 ```sh
 ./push_swap 4 67 3 87 23
-```
+``` (*stack_a)
 
 Force the simple strategy:
 
@@ -185,7 +185,7 @@ Force the complex strategy:
 ```
 
 Enable benchmark reporting:
-
+ (*stack_a)
 ```sh
 ./push_swap --bench 4 67 3 87 23
 ```

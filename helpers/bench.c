@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   bench.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lnafa <lnafa@learner.42.tech>              +#+  +:+       +#+        */
+/*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 18:44:33 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/20 19:54:00 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/21 17:46:33 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-char	*get_strategy(int s, float d)
+static char	*get_strategy(int s, float d, t_list **stack_a)
 {
 	if (s == ADAPTIVE)
 	{
-		if (d < 0.2)
+		if (d < 0.2 || (ft_lstsize(*stack_a) <= 5))
 			return ("Adaptive / O(n^2)");
 		else if (d >= 0.2 && d < 0.5)
 			return ("Adaptive / O(n√n)");
@@ -32,10 +32,12 @@ char	*get_strategy(int s, float d)
 	return ("not a strategy");
 }
 
-void	bench(t_bench *bench_data, int strategy, float disoreder)
+void	bench(t_bench *bench_data, int strategy, float disoreder,
+		t_list **stack_a)
 {
 	ft_printf(2, "[bench] disorder:   %f%%\n", (double)disoreder * 100.0);
-	ft_printf(2, "[bench] strategy:   %s\n", get_strategy(strategy, disoreder));
+	ft_printf(2, "[bench] strategy:   %s\n", get_strategy(strategy, disoreder,
+			stack_a));
 	ft_printf(2, "[bench] total_ops:   %d\n", bench_data->total);
 	ft_printf(2, "[bench] sa:  %d   sb:  %d   ss:  %d   pa:  %d   pb:  %d\n",
 		bench_data->sa, bench_data->sb, bench_data->ss, bench_data->pa,
