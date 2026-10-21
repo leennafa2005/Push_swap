@@ -6,7 +6,7 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 06:49:29 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/11 16:19:15 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/21 21:08:51 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	is_sorted(t_list *stack_a)
 			return (0);
 		stack_a = stack_a->next;
 	}
-	ft_printf(1, "%s\n", "its already sorted");
 	return (1);
 }
 
