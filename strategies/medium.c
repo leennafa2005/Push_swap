@@ -6,13 +6,13 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 17:47:37 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/19 16:37:53 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/22 18:02:15 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	give_chunk(t_list **stack_a)
+static void	give_chunk(t_list **stack_a)
 {
 	int		sizec;
 	t_list	*temp;

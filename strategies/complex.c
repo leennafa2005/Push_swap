@@ -6,13 +6,13 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 17:55:23 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/18 19:19:37 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/22 18:01:54 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	get_bits(int index)
+static int	get_bits(int index)
 {
 	int	bit;
 

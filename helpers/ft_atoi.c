@@ -6,13 +6,13 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/10 07:21:52 by lnafa             #+#    #+#             */
-/*   Updated: 2026/10/21 20:03:33 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/22 17:59:21 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	check_overflow(long result, int sign, char c)
+static int	check_overflow(long result, int sign, char c)
 {
 	if (sign == 1 && result > (2147483647 - (c - '0')) / 10)
 		return (0);

@@ -6,13 +6,11 @@
 /*   By: lnafa <lnafa@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 17:20:05 by mohal-al          #+#    #+#             */
-/*   Updated: 2026/10/21 20:29:35 by lnafa            ###   ########.fr       */
+/*   Updated: 2026/10/22 18:02:39 by lnafa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-void		print_stack(t_list *stack, char *name);
 
 int	minv(t_list **stack)
 {
